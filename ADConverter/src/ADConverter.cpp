@@ -87,10 +87,13 @@ void ADConverter::_validarVref(float v_ref) {
         }
 
     #elif defined(ARDUINO_ARCH_ESP8266)
-        valido = (v_ref == 3.3f);
+        // 1.0V = ESP-01 (sem divisor de tensão na placa)
+        // 3.3V = NodeMCU / Wemos D1 Mini (com divisor na placa)
+        valido = (v_ref == 1.0f || v_ref == 3.3f);
         if (!valido) {
             Serial.println(
-                "ERRO ADConverter: ESP8266 so suporta v_ref=3.3"
+                "ERRO ADConverter: v_ref invalido para ESP8266.\n"
+                "Valores validos: 1.0 (ESP-01), 3.3 (NodeMCU/D1 Mini)"
             );
             while(true);
         }
