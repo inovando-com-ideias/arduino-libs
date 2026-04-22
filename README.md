@@ -8,7 +8,7 @@ Canal **Inovando com Ideias** — github.com/inovando-com-ideias
 | Biblioteca / Descrição                                              | Plataformas                        |
 |---------------------------------------------------------------------|------------------------------------|
 | [ADConverter](https://github.com/inovando-com-ideias/ADConverter)   |                                    |
-| Leitura ADC multiplataforma com VREF configurável                   | ESP8266, ESP32, RP2040, STM32, AVR |
+| Leitura ADC multiplataforma com VREF configurável                   | ESP8266, ESP32, RP2040, AVR |
 
 ## Como instalar no Arduino IDE
 
